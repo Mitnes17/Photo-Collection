@@ -1,3 +1,29 @@
+# Photo Collection
+
+A pretty photo collection application.
+
+Сollections are stored on the server and render on fetch request.
+
+You can select a category and get relevant data from server.
+
+There is a search by category name.
+
+There's mockAPI pagination.
+
+Adaptive design.
+
+Technology stack:
+
+-React
+
+-Styled Components
+
+-TypeScript
+
+-mockAPI
+
+You can see it on vercel: https://photo-collection.vercel.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
