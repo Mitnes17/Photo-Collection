@@ -40,6 +40,7 @@ export const Top = styled.div`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  row-gap: 20px;
 `;
 
 export const Tags = styled.ul`
@@ -66,10 +67,32 @@ export const TagsItem = styled.li`
     border-color: #000;
   }
 
-  &.active {
-    background-color: #000;
+  &.isActive {
+    background-color: #49290f;
     color: #fff;
   }
 `;
 
 export const H1 = styled.h1``;
+
+export const Pagination = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+  li {
+    display: inline-block;
+    padding: 10px 17px;
+    background-color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-right: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    &.isActive {
+      background-color: #49290f;
+      color: #fff;
+    }
+  }
+`;

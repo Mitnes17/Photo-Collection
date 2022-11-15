@@ -12,6 +12,9 @@ export const Collection = styled.div`
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
     transform: scale(1.1);
   }
+  @media (max-width: 768px) {
+    padding: 12px;
+  }
 `;
 
 export const ImageBig = styled.img`
