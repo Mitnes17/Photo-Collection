@@ -22,10 +22,10 @@ export const Container = styled.div`
 `;
 
 export const Search = styled.input`
-  font-size: 16px;
   width: 250px;
   height: 50px;
   padding: 0 15px;
+  font-size: 16px;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   outline: none;
@@ -44,19 +44,19 @@ export const Top = styled.div`
 `;
 
 export const Tags = styled.ul`
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
   padding: 0;
   row-gap: 10px;
+  list-style: none;
 `;
 
 export const TagsItem = styled.li`
   display: inline-block;
   padding: 12px 18px;
+  margin-right: 10px;
   background-color: #fff;
   border-radius: 10px;
-  margin-right: 10px;
   cursor: pointer;
   font-weight: 500;
   font-size: 18px;
@@ -73,13 +73,11 @@ export const TagsItem = styled.li`
   }
 `;
 
-export const H1 = styled.h1``;
-
 export const Pagination = styled.ul`
   list-style: none;
   padding: 0;
-  margin: 0;
-  margin-top: 40px;
+  margin: 40px 0 0 0;
+
   li {
     display: inline-block;
     padding: 10px 17px;

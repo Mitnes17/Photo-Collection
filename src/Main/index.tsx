@@ -4,25 +4,20 @@ import { Collection } from '../Collection';
 import { DataType } from '../Collection/Collection';
 import * as S from './styled';
 
+const categories = ['Moon', 'Cats', 'Architecture', 'Art', 'Christmas', 'Forest'];
+
 export const Main = () => {
-  const [data, setData] = useState([]);
-
-  const [isLoading, setIsLoading] = useState(true);
-
   const [searchValue, setSearchValue] = useState('');
-
-  const onChangeValue = (e: any) => {
-    setSearchValue(e.target.value);
-  };
+  const onChangeValue = (e: any) => setSearchValue(e.target.value);
 
   const [category, setCategory] = useState('');
   const onClickCategory = (value: string) => setCategory(value);
 
-  const categories = ['Moon', 'Cats', 'Architecture', 'Art', 'Christmas', 'Forest'];
-
   const [page, setPage] = useState('1');
   const onClickPage = (page: number) => setPage(page.toString());
-  console.log(page);
+
+  const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setIsLoading(true);
@@ -36,7 +31,7 @@ export const Main = () => {
 
   return (
     <S.Container>
-      <S.H1>My Photo Collection</S.H1>
+      <h1>My Photo Collection</h1>
       <S.Top>
         <S.Tags>
           <S.TagsItem
