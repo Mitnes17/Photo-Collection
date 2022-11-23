@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, ChangeEvent } from 'react';
 
 import { Collection } from '../Collection';
 import { DataType } from '../Collection/Collection';
@@ -8,16 +8,16 @@ const categories = ['Moon', 'Cats', 'Architecture', 'Art', 'Christmas', 'Forest'
 
 export const Main = () => {
   const [searchValue, setSearchValue] = useState('');
-  const onChangeValue = (e: any) => setSearchValue(e.target.value);
-
   const [category, setCategory] = useState('');
-  const onClickCategory = (value: string) => setCategory(value);
-
-  const [page, setPage] = useState('1');
-  const onClickPage = (page: number) => setPage(page.toString());
-
+  const [page, setPage] = useState(1);
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
+  const onChangeValue = (e: ChangeEvent<HTMLInputElement>) => setSearchValue(e.target.value);
+
+  const onClickCategory = (value: string) => setCategory(value);
+
+  const onClickPage = (page: number) => setPage(page);
 
   useEffect(() => {
     setIsLoading(true);
@@ -69,8 +69,9 @@ export const Main = () => {
       <S.Pagination>
         {[...Array(3)].map((_, i) => (
           <li
+            key={i}
             onClick={() => onClickPage(i + 1)}
-            className={page === (i + 1).toString() ? 'isActive' : ''}
+            className={page === i + 1 ? 'isActive' : ''}
           >
             {i + 1}
           </li>
